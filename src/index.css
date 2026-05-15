@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clip-hero {
+  clip-path: polygon(0 0, 70% 0, 55% 100%, 0% 100%);
+}
+
+body {
+  padding-top: 64px; /* matches navbar height */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clip-hero {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
