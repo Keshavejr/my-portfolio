@@ -1,18 +1,24 @@
+/** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
+
   content: ["./index.html", "./src/**/*.{js,jsx}"],
+
   theme: {
     extend: {
       colors: {
-        bhutanRed: "#9B1C1C",   // deep maroon
-        bhutanGold: "#FFD700",  // saffron/golden yellow
-        bhutanGreen: "#006400", // dark green
-        bhutanBlue: "#1E3A8A",  // deep blue
+        bhutanRed: "#9B1C1C",
+        bhutanGold: "#FFD700",
+        bhutanGreen: "#006400",
+        bhutanBlue: "#1E3A8A",
       },
+
       fontFamily: {
-        heading: ["Merriweather", "serif"], // decorative for headings
-        body: ["Inter", "sans-serif"],      // clean for body text
+        heading: ["Merriweather", "serif"],
+        body: ["Inter", "sans-serif"],
       },
     },
   },
+
   plugins: [],
 }
