@@ -2,94 +2,122 @@ function Skills() {
 
   const skillCategories = [
     {
-      title: "Frontend",
-      icon: "🎨",
-      skills: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+      title: "Frontend Engineering",
+      icon: "ri-layout-masonry-line",
+      desc: "Building responsive interfaces, dashboards, and modern user experiences.",
+      skills: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "HTML5",   
+      ]   
     },
 
     {
-      title: "Backend",
-      icon: "⚙️",
-      skills: ["Python", "Django", "Node.js"],
+      title: "Backend Systems",
+      icon: "ri-server-line",
+      desc: "Developing backend workflows, APIs, authentication, and business logic.",
+      skills: [
+        "Python",
+        "Django",
+        "Node.js",
+        
+        
+      ],
     },
 
     {
-      title: "Database & Tools",
-      icon: "🗄️",
-      skills: ["SQLite", "db.sqlite3", "GitHub"],
+      title: "Database & Operations",
+      icon: "ri-database-2-line",
+      desc: "Managing structured operational data and scalable workflow systems.",
+      skills: [
+        "SQLite",
+        "Inventory Logic",
+        "ERP Workflows",
+      ],
     },
 
     {
-      title: "Cybersecurity & AI",
-      icon: "🔐",
-      skills: ["Cybersecurity", "TensorFlow", "Keras", "System Security"],
+      title: "Tools & Development",
+      icon: "ri-code-s-slash-line",
+      desc: "Version control, deployment workflows, and modern development tooling.",
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Responsive Design",
+        "System Architecture",
+      ],
     },
   ];
 
   return (
     <section
       id="skills"
-      className="py-24 bg-gradient-to-br from-white to-red-50 dark:from-[#0f0f11] dark:to-[#16161a] scroll-mt-24 relative overflow-hidden"
+      className="relative py-28 overflow-hidden bg-gradient-to-b from-white to-red-50/40 dark:from-[#0b0b0d] dark:to-[#121215] scroll-mt-24"
     >
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute -top-20 left-0 w-72 h-72 bg-red-300 dark:bg-red-500 rounded-full blur-2xl opacity-20 dark:opacity-10"></div>
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-200 dark:bg-orange-500 rounded-full blur-2xl opacity-20 dark:opacity-10"></div>
+      {/* GLOW */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-red-500/10 blur-3xl rounded-full"></div>
 
-      {/* DOT GRID */}
-      <div className="absolute inset-0 opacity-20 dark:opacity-5 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-orange-400/10 blur-3xl rounded-full"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
 
         {/* HEADER */}
-        <div className="text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-20">
 
-          <p className="uppercase tracking-[0.3em] text-sm text-red-500 font-semibold mb-3">
-            Skills
+          <p className="uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold text-red-500 mb-5">
+            Engineering Stack
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-            Technologies & Expertise
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">
+            Technologies used to build
+            <span className="block bg-gradient-to-r from-red-600 to-orange-400 bg-clip-text text-transparent mt-2">
+              operational software systems
+            </span>
           </h2>
 
-          <p className="text-gray-500 dark:text-gray-300 mt-4 max-w-2xl mx-auto leading-relaxed">
-            Tools, frameworks, and technologies I use to build scalable
-            applications and secure systems.
+          <p className="mt-7 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            Focused on modern frontend interfaces, scalable backend workflows,
+            structured database systems, and business-oriented application development.
           </p>
 
         </div>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-7">
 
           {skillCategories.map((category, index) => (
 
             <div
               key={index}
-              className="group relative overflow-hidden bg-white/80 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-red-200 dark:hover:border-red-500/20 transition duration-300"
+              className="group relative overflow-hidden rounded-[30px] border border-black/5 dark:border-white/10 bg-white/80 dark:bg-white/[0.03] backdrop-blur-xl p-8 md:p-9 shadow-xl hover:-translate-y-1 hover:border-red-400/30 transition-all duration-300"
             >
 
-              {/* CARD HOVER EFFECT */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-orange-400/0 to-red-500/0 group-hover:from-red-500/5 group-hover:to-orange-400/5 transition duration-300"></div>
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/[0.03] to-orange-400/[0.03] opacity-0 group-hover:opacity-100 transition duration-300"></div>
 
               <div className="relative z-10">
 
                 {/* TOP */}
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-start gap-5 mb-8">
 
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                    {category.icon}
+                  <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 text-2xl shrink-0 group-hover:scale-105 transition-transform duration-300">
+                    <i className={category.icon}></i>
                   </div>
 
                   <div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                       {category.title}
                     </h3>
 
-                    <p className="text-gray-500 dark:text-gray-300 text-sm">
-                      Core technologies & tools
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 leading-relaxed">
+                      {category.desc}
                     </p>
 
                   </div>
@@ -103,7 +131,7 @@ function Skills() {
 
                     <span
                       key={skill}
-                      className="bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 px-4 py-2 rounded-full text-sm font-medium border border-red-100 dark:border-red-500/20 hover:bg-red-100 dark:hover:bg-red-500/20 hover:scale-105 transition duration-300 cursor-default"
+                      className="px-4 py-2 rounded-xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.03] text-sm text-gray-700 dark:text-gray-300 hover:border-red-400/40 hover:text-red-500 transition-all duration-300"
                     >
                       {skill}
                     </span>
@@ -119,6 +147,7 @@ function Skills() {
           ))}
 
         </div>
+        
 
       </div>
 

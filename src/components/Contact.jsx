@@ -45,6 +45,7 @@ function Contact() {
   };
 
   return (
+    <>
     <section
       id="contact"
       className="py-24 bg-gradient-to-b from-white to-red-50 dark:from-[#0f0f11] dark:to-[#16161a] scroll-mt-24 transition-colors duration-500 relative overflow-hidden"
@@ -88,7 +89,7 @@ function Contact() {
             <div className="bg-white/80 dark:bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-gray-100 dark:border-white/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Get In Touch
+                Let’s Connect
               </h3>
 
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
@@ -277,8 +278,18 @@ function Contact() {
 
       </div>
 
-    </section>
+        </section>
+        
+       <footer className="text-center py-6 text-gray-500 dark:text-gray-400 text-sm bg-white dark:bg-[#0f0f11]">
+        © {new Date().getFullYear()} Keshave Basnet. All rights reserved.
+        <br />
+        Designed & built with passion.
+      </footer>
+
+      </>
+    
   );
 }
+
 
 export default Contact;

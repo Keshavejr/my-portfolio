@@ -4,105 +4,113 @@ function Projects() {
 
   const projects = [
     {
-      title: "🔧 Tyre Repair & Service ERP",
+      title: "Tyre Inventory & Service ERP",
       description:
-        "A full-stack ERP system built for a tyre business to manage inventory, staff, and operations. Includes an integrated customer booking system where staff can accept or cancel appointments directly from the dashboard.",
-      tech: ["Python", "Django", "Tailwind CSS"],
+        "A full-stack ERP platform developed for tyre business operations including inventory tracking, supplier management, booking workflows, invoice systems, and customer operations.",
+      tech: ["Python", "Django", "JavaScript",  "Tailwind CSS", "SQLite"],
       featured: true,
       internal: true,
       path: "/tyre-erp",
       github: "https://github.com/Keshavejr/tyre-inventory-erp.git",
+      icon: "ri-settings-3-line",
     },
 
     {
-      title: "📚 Library Management System",
+      title: "Library Management System",
       description:
-        "A web-based platform for managing book records, member registrations, and borrowing history with a built-in reservation system.",
+        "A structured management platform for handling book inventories, borrowing workflows, reservations, and member operations.",
       tech: ["Python", "Django", "Bootstrap"],
       live: "https://library-management-system-i21b.onrender.com",
       github: "https://github.com/Keshavejr/library-management-system.git",
+      icon: "ri-book-2-line",
     },
 
     {
-      title: "🧠 Brain MRI Tumor Detection",
+      title: "Brain Tumor Detection System",
       description:
-        "A machine learning project that detects brain tumors from MRI scans using a trained classification model with a simple upload interface.",
-      tech: ["Python", "TensorFlow", "Keras"],
+        "A machine learning application designed to classify MRI brain scans using a trained image classification model with an integrated prediction workflow and image analysis interface.",
+      tech: ["Python", "TensorFlow", "Keras", "Django REST Framework",],
       internal: true,
       path: "/brain-mri",
       github: "https://github.com/Keshavejr/brain-tumor-ai.git",
+      icon: "ri-brain-line",
     },
   ];
 
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-b from-white to-red-50 dark:from-[#0f0f11] dark:to-[#16161a] scroll-mt-24 relative overflow-hidden"
+      className="relative py-28 overflow-hidden bg-gradient-to-b from-white to-red-50/40 dark:from-[#121215] dark:to-[#0b0b0d] scroll-mt-24"
     >
 
-      {/* BACKGROUND GLOWS */}
-      <div className="absolute -top-20 left-0 w-72 h-72 bg-red-300 dark:bg-red-500 rounded-full blur-2xl opacity-20 dark:opacity-10"></div>
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-200 dark:bg-orange-500 rounded-full blur-2xl opacity-20 dark:opacity-10"></div>
+      {/* GLOW */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-red-500/10 blur-3xl rounded-full"></div>
 
-      {/* DOT GRID */}
-      <div className="absolute inset-0 opacity-20 dark:opacity-5 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-orange-400/10 blur-3xl rounded-full"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
 
         {/* HEADER */}
-        <div className="text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-20">
 
-          <p className="uppercase tracking-[0.3em] text-sm text-red-500 font-semibold mb-3">
-            Portfolio
+          <p className="uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold text-red-500 mb-5">
+            Selected Work
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-            Featured Projects
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">
+            Building software for
+            <span className="block bg-gradient-to-r from-red-600 to-orange-400 bg-clip-text text-transparent mt-2">
+              operational business workflows
+            </span>
           </h2>
-
-          <p className="text-gray-500 dark:text-gray-300 mt-4 max-w-2xl mx-auto leading-relaxed">
-            Real-world systems and applications focused on business workflows,
-            automation, and scalable full-stack development.
-          </p>
 
         </div>
 
         {/* PROJECT GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
 
           {projects.map((project, index) => (
 
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-3xl border border-gray-100 dark:border-white/10 bg-white/80 dark:bg-white/5 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-red-200 dark:hover:border-red-500/20 transition duration-300 ${
-                project.featured ? "lg:col-span-2 p-8" : "p-6"
+              className={`group relative overflow-hidden rounded-[32px] border border-black/5 dark:border-white/10 bg-white/80 dark:bg-white/[0.03] backdrop-blur-xl shadow-xl hover:-translate-y-2 hover:border-red-400/30 transition-all duration-300 ${
+                project.featured
+                  ? "lg:col-span-2 p-8 md:p-10"
+                  : "p-7"
               }`}
             >
 
-              {/* HOVER GLOW */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-orange-400/0 to-red-500/0 group-hover:from-red-500/5 group-hover:to-orange-400/5 transition duration-300"></div>
+              {/* HOVER EFFECT */}
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/[0.03] to-orange-400/[0.03] opacity-0 group-hover:opacity-100 transition duration-300"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 h-full flex flex-col">
+
+                {/* ICON */}
+                <div className="w-14 h-14 rounded-2xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 transition duration-300">
+                  <i className={project.icon}></i>
+                </div>
 
                 {/* TITLE */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white leading-tight">
                   {project.title}
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                <p className="mt-5 text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                   {project.description}
                 </p>
 
                 {/* TECH STACK */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-3 mt-7">
 
                   {project.tech.map((tech) => (
 
                     <span
                       key={tech}
-                      className="bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400 px-3 py-1 rounded-full text-xs font-medium border border-red-100 dark:border-red-500/20 hover:bg-red-100 dark:hover:bg-red-500/20 transition duration-300"
+                      className="px-4 py-2 rounded-xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.03] text-sm text-gray-700 dark:text-gray-300"
                     >
                       {tech}
                     </span>
@@ -112,17 +120,18 @@ function Projects() {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mt-8">
 
-                  {/* INTERNAL PROJECT */}
                   {project.internal ? (
 
                     <Link
                       to={project.path}
                       state={{ scrollY: window.scrollY }}
-                      className="bg-red-600 text-white px-5 py-2.5 rounded-xl text-sm hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/20 transition duration-300"
+                      className="group/button bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-2xl transition-all duration-300 shadow-lg shadow-red-500/20 flex items-center gap-2"
                     >
-                      View Project
+                      View Case Study
+
+                      <i className="ri-arrow-right-line transition-transform duration-300 group-hover/button:translate-x-1"></i>
                     </Link>
 
                   ) : (
@@ -131,19 +140,21 @@ function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-red-600 text-white px-5 py-2.5 rounded-xl text-sm hover:bg-red-700 hover:shadow-lg hover:shadow-red-500/20 transition duration-300"
+                      className="group/button bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-2xl transition-all duration-300 shadow-lg shadow-red-500/20 flex items-center gap-2"
                     >
                       Live Demo
+
+                      <i className="ri-external-link-line transition-transform duration-300 group-hover/button:translate-x-1"></i>
                     </a>
 
                   )}
 
-                  {/* GITHUB BUTTON */}
+                  {/* GITHUB */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-gray-300 dark:border-white/10 bg-white/70 dark:bg-white/5 text-gray-700 dark:text-gray-200 px-5 py-2.5 rounded-xl text-sm hover:bg-gray-100 dark:hover:bg-white/10 transition duration-300"
+                    className="border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl text-gray-700 dark:text-gray-200 px-5 py-3 rounded-2xl hover:border-red-400/40 hover:bg-gray-50 dark:hover:bg-white/[0.06] transition-all duration-300"
                   >
                     GitHub
                   </a>
